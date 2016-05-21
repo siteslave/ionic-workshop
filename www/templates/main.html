@@ -11,15 +11,15 @@
         </button>
       </div>
 
-     <div class="item item-icon-left item-icon-right"
-      ng-repeat="p in person">
+     <a class="item item-icon-left item-icon-right"
+      ng-repeat="p in person" href="#/detail/{{p.hospcode}}/{{p.pid}}">
         <i class="icon ion-male positive" ng-if="p.sex == '1'"></i>
         <i class="icon ion-female balanced" ng-if="p.sex == '2'"></i>
         {{ p.fullname }}
         <span class="item-note">
           {{ p.birth }}
         </span>
-      </div>
+      </a>
    </div>
 
   </ion-content>

@@ -13,6 +13,7 @@ angular.module('starter.Main', [])
       });
       MainService.getPerson()
         .then(function (data) {
+          $log.info(data);
           $ionicLoading.hide();
           $scope.person = data.rows;
         }, function (err) {
