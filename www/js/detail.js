@@ -14,19 +14,7 @@ angular.module('starter.Detail', [])
       .then(function (data) {
         $ionicLoading.hide();
         $log.info(data);
-        /*
-      "HOSPCODE": "04954",
-      "PID": "000003",
-      "NAME": "สมศักดิ์",
-      "LNAME": "สีละวัน",
-      "BIRTH": "1990-11-24T17:00:00.000Z",
-      "SEX": "1",
-      "HOUSE": "1",
-      "VILLAGE": "01",
-      "CHANGWAT_NAME": "มหาสารคาม",
-      "AMPUR_NAME": "กันทรวิชัย",
-      "TAMBON_NAME": "คันธารราษฎร์
-*/
+
         if (data.rows.length) {
           $scope.person = data.rows[0];
           $scope.person.fullname = data.rows[0].NAME + ' ' + data.rows[0].LNAME;

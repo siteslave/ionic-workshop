@@ -1,0 +1,22 @@
+<ion-view title="Anc">
+  <ion-content class="padding">
+
+   <div class="list">
+     <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="..." ng-model="query">
+        </label>
+      </div>
+
+     <a class="item item-icon-left item-icon-right"
+      ng-repeat="a in anc | filter: query" href="#/anc/detail/{{a.CID}}">
+      <i class="icon ion-ios-medkit balanced"></i>
+        {{ a.FULLNAME }}
+        <span class="item-note">
+          ครรภ์ที่ {{ a.GRAVIDA }}
+        </span>
+      </a>
+   </div>
+
+  </ion-content>
+</ion-view>

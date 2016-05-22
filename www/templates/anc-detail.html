@@ -1,0 +1,15 @@
+<ion-view title="Anc History">
+  <ion-content class="padding">
+   <div class="list">
+     <a class="item item-icon-left item-icon-right"
+      ng-repeat="a in anc">
+      <i class="icon ion-ios-medkit balanced"></i>
+        {{ a.HOSPCODE }} - {{ a.HOSPNAME }}
+        <span class="item-note">
+          วันที่ {{ a.DATE_SERV }}, ผล {{ a.RESULT }}
+        </span>
+      </a>
+   </div>
+
+  </ion-content>
+</ion-view>
